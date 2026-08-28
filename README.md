@@ -1,5 +1,5 @@
 <p align="center">
- <img src="./assets/Z Y G U A R D.png" alt="Z Y G U A R D"></a>
+ <img src="./assets/zyguard-logo-enhanced.png" alt="Z Y G U A R D"></a>
 </p>
 
 <h3 align="center">Z Y G U A R D</h3>
@@ -9,44 +9,26 @@
 
 ## Table of Contents
 
-- [Why must you document your project](#why_document)
-- [Best Practices](#best_practices)
-- [Templates](#templates)
-- [The Art of Technical Writing](#art)
+- [ The purpose of Zyguard ](#purpose)
+- [ Architecture ](#arch)
+- [ How it works ](#templates)
+- [ In-depth Technical analysis ](#art)
   - [Novice Technical Writers](https://www.writethedocs.org/guide/#new-to-caring-about-documentation)
   - [Experienced Technical Writers](https://www.writethedocs.org/guide/#experienced-documentarian)
   - [API Documentation](https://www.writethedocs.org/guide/#api-documentation)
   - [Adding badges](https://github.com/badges/shields/blob/master/README.md#examples)
   - [Tools](https://www.writethedocs.org/guide/#tools-of-the-trade)
-- [Technical Writer Programs](#programs)
-- [Awesome Technical Writing Sources](#sources)
-- [Get Feedback](#feedback)
 - [Acknowledgements](#acknowledgements)
 
 
-## Why must you document your project? <a name = "why_document"></a>
+## The Purpose of Zyguard <a name = "purpose"></a>
 
-- It doesn’t matter how good your software is, because if the documentation is not good enough, people will not use it.
-Even if for some reason they have to use it, without good documentation, they won’t use it effectively or the way you’d like them to
-- THE MAJORITY OF PEOPLE GLANCE AND LEAVE. Make it pretty so that it's easier for them to star before they leave. The more stars you have, the likelier it is that serious developers will use your repo
-- You will be using your code in 6 months. Code that you wrote 6 months ago is often indistinguishable from code that someone else has written
-- You want people to use your code because you think that others might find it useful. However, people need to understand why your code might be useful for them, before they decide to use it
-- You want people to help out. If you don’t have documentation, you will miss out on a whole class of contributors
-- You want to be a better writer
+- Zyguard is a BPF program designed to protect Zyphos OS native packages from unauthorized modification by malicious software. A core goal of Zyphos OS is reducing user friction during multi-step tasks—such as using a single zyphor CLI instead of juggling multiple package managers. Because these native packages are not yet fully battle-tested, Zyguard acts as a safety net by restricting unauthorized access to keep the system secure.
 
 
-## Best Practices<a name = "best_practices"></a>
+## Architecture <a name = "arch"></a>
 
-**Things to remember:**
-
-- Keep a lighthearted friendly tone. Treat the reader as someone who doesn't have a lot of knowledge about the topic but is very interested
-- Keep things brief
-- Use headings frequently. This breaks things up when reading and often it is good for linking to specific information
-- Link to other places in the documentation often but only for additional information. Readers should not have to navigate through several pages to find information regarding one specific thing. Just inline the immediately relevant information and link off if they want to know more
-- Use as many code snippets, CLI, etc. examples as possible. Show the reader what you mean
-- Gently introduce a guide before diving into technical details. This gives context and readers are more likely to stay engaged longer
-- It is always good to describe the functionality of the various files in your project
-- Always use gender-neutral pronouns. A gender-neutral pronoun is a pronoun which does not associate a gender with the individual who is being discussed. For eg. - using 'they' instead of 'he/she'
+![alt text](assets/zyguard-system-flow.png)
 
 **Things you should avoid:**
 
