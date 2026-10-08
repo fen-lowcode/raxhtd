@@ -1,15 +1,15 @@
 <p align="center">
- <img src="./assets/zyguard-logo-enhanced.png" alt="Z Y G U A R D"></a>
+ <img src="./assets/hsfs-logo.png" alt="Z Y G U A R D"></a>
 </p>
 
-<h3 align="center">Z Y G U A R D</h3>
+<h3 align="center">H S F S</h3>
 
-<p align = "center">Protector of Zyphor os Ecosystem.</p>
+<p align = "center">Something made from scratch</p>
 
 
 ## Table of Contents
 
-- [ The purpose of Zyguard ](#purpose)
+- [ The purpose of HSFS ](#purpose)
 - [ Architecture ](#arch)
 - [ How it works ](#templates)
 - [ In-depth Technical analysis ](#art)
@@ -21,7 +21,7 @@
 - [Acknowledgements](#acknowledgements)
 
 
-## The Purpose of Zyguard <a name = "purpose"></a>
+## The Purpose of HSFS <a name = "purpose"></a>
 
 - Zyguard is a BPF program designed to protect Zyphos OS native packages from unauthorized modification by malicious software. A core goal of Zyphos OS is reducing user friction during multi-step tasks—such as using a single zyphor CLI instead of juggling multiple package managers. Because these native packages are not yet fully battle-tested, Zyguard acts as a safety net by restricting unauthorized access to keep the system secure.
 
