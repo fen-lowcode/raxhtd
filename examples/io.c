@@ -1,7 +1,30 @@
 typedef __SIZE_TYPE__ size_t; 
 
 
-void feprintf(char* string, size_t size) {
+size_t festrlen(char string[]) {
+
+    size_t sze = 0;
+
+    int i = 0;
+    while(1) {
+        if (string[i] != '\0') {
+            sze++;
+            i++;
+
+        } else {
+
+            sze++;
+            break;
+        }
+    }
+    
+    return sze;
+}
+
+void feprintf(char string[]) {
+
+   size_t sze = festrlen(string);
+
    asm volatile(
     "mov rax, 1\n\t"
     "mov rdi, 1\n\t"
@@ -10,7 +33,7 @@ void feprintf(char* string, size_t size) {
     "syscall\n\t"
 
     : 
-    : "S"(string), "d"(size)
+    : "S"(string), "d"(sze)
     : "rcx", "r11", "memory"
     
     );
@@ -45,7 +68,8 @@ void feexit_failure() {
 }
 
 void _start() {
-    feprintf("Hello world!\n", 13);
+    feprintf("HElooooooooooooooo World!!!\n");
+    int x = sizeof(char*);
     feexit_failure();
 }
 
