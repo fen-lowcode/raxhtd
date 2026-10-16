@@ -12,15 +12,15 @@
 - [ What is RAXHTD ](#what)
 - [ The purpose of RAXHTD ](#purpose)
 - [ Writer's Manifesto ](#manifesto)
-- [ Architecture ](#arch)
-- [ How it works ](#templates)
+<!-- - [ Architecture ](#arch) -->
+<!-- - [ How it works ](#templates)
 - [ In-depth Technical analysis ](#art)
   - [Novice Technical Writers](https://www.writethedocs.org/guide/#new-to-caring-about-documentation)
   - [Experienced Technical Writers](https://www.writethedocs.org/guide/#experienced-documentarian)
   - [API Documentation](https://www.writethedocs.org/guide/#api-documentation)
   - [Adding badges](https://github.com/badges/shields/blob/master/README.md#examples)
   - [Tools](https://www.writethedocs.org/guide/#tools-of-the-trade)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgements](#acknowledgements) -->
 
 
 ## What is RAXHTD <a name = "what"></a>
@@ -40,8 +40,8 @@ In a modern development landscape dominated by high-level abstractions, bloated 
 
 * Everything is from scratch excempt the gcc compiler 
 * No use of AI-generated code, it is entirely written by hand, purely for education.
-* Only allowed to use free-standing C with no standard or third-party libraries
-
+* Only allowed to use free-standing C without standard or third-party libraries
+<!-- 
 
 ## Architecture <a name = "arch"></a>
 
@@ -52,9 +52,9 @@ In a modern development landscape dominated by high-level abstractions, bloated 
 - Don't assume prior knowledge about the topic. If you want to appeal to a large audience, then you are going to have people with very diverse backgrounds
 - Don't use idioms. Write using more formal terms that are well defined. This makes it easier for non-native English speakers and for translations to be written
 - Don't clutter explanations with overly detailed examples
-- Don't use terms that are offensive to any group. There will never be a good reason to
+- Don't use terms that are offensive to any group. There will never be a good reason to -->
 
-
+<!-- 
 ## Templates <a name = "templates"></a>
 
 - [README](/en/README_TEMPLATES)
@@ -65,9 +65,9 @@ In a modern development landscape dominated by high-level abstractions, bloated 
 - [Coding Guidelines](/en/CODING_GUIDELINES.md)
 - [Codebase Structure](/en/CODEBASE_STRUCTURE.md)
 - [Changelog](/en/CHANGELOG.md)
-- [TODO](/en/TODO.md)
+- [TODO](/en/TODO.md) -->
 
-
+<!-- 
 ## The Art of Technical Writing <a name = "art"></a>
 
 Further reading on technical writing topics from [www.writethedocs.org](https://www.writethedocs.org)
@@ -112,8 +112,8 @@ Further reading on technical writing topics from [www.writethedocs.org](https://
 
 1. [Documenting your projects on GitHub](https://guides.github.com/features/wikis/) - GitHub Guides
 2. [documentation-handbook](https://github.com/jamiebuilds/documentation-handbook) - jamiebuilds
-3. [Documentation Guide](https://www.writethedocs.org/guide/) - Write the Docs
-
+3. [Documentation Guide](https://www.writethedocs.org/guide/) - Write the Docs -->
+<!-- 
 
 ## P.S. <a name = "ps"></a>
 
@@ -133,4 +133,4 @@ Further reading on technical writing topics from [www.writethedocs.org](https://
     <span property="dct:title">Kyle Lobo</span></a>
   has waived all copyright and related or neighboring rights to
   <span property="dct:title">The Documentation Compendium</span>.
-</p>
+</p> -->
