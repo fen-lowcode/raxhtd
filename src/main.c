@@ -1,8 +1,8 @@
-#include "../lib/exit_status.h"
-#include "../lib/festr.h"
+#include "../headers/exit_status.h"
+#include "../headers/festr.h"
 
 int _start() {
 
-    feprintf("Hello World!\n");
+    feprints("Hello World!\n");
     feexit_success();
 }
