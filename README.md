@@ -33,7 +33,7 @@
 
 In a modern development landscape dominated by high-level abstractions, bloated libraries, and "black box" APIs that blurs the mechanics behind the scenes, building software from the ground up has become a lost art form. 
 
-**RAXHTD** is not designed to replace production-grade enterprise servers like Apache or Nginx. Instead, it stands as a pure, educational pursuit—a challenge to reclaim mastery over the machine, stripping away the magic boxes to appreciate the raw engineering of the technology behind the web.
+**RAXHTD** is not designed to replace production-grade enterprise servers like Apache or Nginx. Instead, it stands as a pure, educational pursuit a challenge to reclaim mastery over the machine, stripping away the magic boxes to appreciate the raw engineering of the technology behind the web.
 
 
 ## Writer's Manifesto <a name = "manifesto"></a>
