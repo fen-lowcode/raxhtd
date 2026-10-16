@@ -1,5 +1,12 @@
-typedef __SIZE_TYPE__ size_t; 
+/*
+ * Copyright (c) 2026 Dan Stephen B. Blanco
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
+
+typedef __SIZE_TYPE__ size_t; 
 
 size_t festrlen(char string[]) {
 
@@ -20,7 +27,7 @@ size_t festrlen(char string[]) {
     
     return sze;
 }
-
+ 
 void feprintf(char string[]) {
 
    size_t sze = festrlen(string);
