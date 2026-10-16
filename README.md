@@ -40,7 +40,7 @@ In a modern development landscape dominated by high-level abstractions, bloated 
 
 * Everything is from scratch excempt the gcc compiler 
 * No use of AI-generated code, it is entirely written by hand, purely for education.
-* Only allowed to use free-standing C without standard or third-party libraries
+* Only allowed to use free-standing C without standard or third-party libraries and x64 Assembly
 <!-- 
 
 ## Architecture <a name = "arch"></a>
