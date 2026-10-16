@@ -11,6 +11,8 @@
 
 int _start() {
 
-    feprints("Hello World!\n");
+    char buffer[100];
+    feread(1, buffer, 100);
+    feprints(buffer);
     feexit_success();
 }

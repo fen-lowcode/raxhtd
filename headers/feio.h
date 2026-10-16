@@ -10,4 +10,4 @@
 #define size_t __SIZE_TYPE__
 
 void feprints(char string[]);
-char* fereads(char string[]);
+int fereads(int fd, char* buf, size_t count);
