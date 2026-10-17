@@ -10,21 +10,28 @@
 #include "../../headers/festr.h"
 
 // refator this to follow write convetion  like feread()
-void feprints(char string[]) {
+int fewrite(int fd, const char buf[], size_t count) {
 
-   size_t sze = festrlen(string);
+
+    long int sze = 0;
+
+    register long rdi asm("rdi") = fd;
+    register long rsi asm("rsi") = (long)buf;
+    register long rdx asm("rdx") = count;
 
     asm volatile(
         "mov rax, 1\n\t"
-        "mov rdi, 1\n\t"
-        "mov rsi, %0\n\t"
-        "mov rdx, %1\n\t"
         "syscall\n\t"
 
+        "mov %3, rax\n\t"
+
         : 
-        : "S"(string), "d"(sze)
+        : "r"(rdi), "r"(rsi), "r"(rdx), "a"(sze)
         : "rcx", "r11", "memory"
     );
+
+    return sze;
+
 }
 
 // Protoype!!
@@ -43,4 +50,6 @@ int feread(int fd, char* buf, size_t count) {
         :
         : "rcx", "r11", "memory"
     );
+
+    return sze;
 }

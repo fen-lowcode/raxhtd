@@ -20,7 +20,6 @@ size_t festrlen(char string[]) {
 
         } else {
 
-            sze++;
             break;
         }
     }
