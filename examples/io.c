@@ -47,6 +47,27 @@ void feprintf(char string[]) {
 }
 
 
+unsigned char string[255];
+char* fereads() {
+
+    size_t sze = 255;
+
+    asm volatile(
+        "mov rax, 0\n\t"
+        "mov rdi, 0\n\t"
+        "mov rsi, %0\n\t"
+        "mov rdx, %1\n\t"
+        "syscall\n\t"
+
+        :
+        : "S"(string), "d"(sze)
+        : "rcx", "r11", "memory"
+    );
+
+    return string;
+}
+
+
 void feexit_success() {
     asm volatile(
         "mov rax, 60\n\t"
@@ -75,9 +96,13 @@ void feexit_failure() {
 }
 
 void _start() {
-    feprintf("HElooooooooooooooo World!!!\n");
-    int x = sizeof(char*);
-    feexit_failure();
+
+    // char* string = fereads();
+    // feprintf(string);
+
+    char buf[100];
+    read(1, &buf, 100);
+    feexit_success();
 }
 
 
