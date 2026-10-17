@@ -10,4 +10,4 @@
 #define size_t __SIZE_TYPE__
 
 int fewrite(int fd, const char buf[], size_t count);
-int fereads(int fd, char* buf, size_t count);
+int feread(int fd, char* buf, size_t count);
