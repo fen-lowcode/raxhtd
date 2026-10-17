@@ -8,5 +8,4 @@
 
 #pragma once
 
-void feexit_success();
-void feexit_failure();
+[[noreturn]] void feexit(int status);
