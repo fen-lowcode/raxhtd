@@ -9,5 +9,5 @@
 #pragma once
 #define size_t __SIZE_TYPE__
 
-void fewrite(int fd, const char buf[], size_t count);
+int fewrite(int fd, const char buf[], size_t count);
 int fereads(int fd, char* buf, size_t count);

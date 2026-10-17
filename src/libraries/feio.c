@@ -40,13 +40,17 @@ int feread(int fd, char* buf, size_t count) {
 
     long int sze = 0;
 
+    register long rdi asm("rdi") = fd;
+    register long rsi asm("rsi") = (long)buf;
+    register long rdx asm("rdx") = count;
+
     asm volatile(
         "mov rax, 0\n\t"
         "syscall\n\t"
     
         "mov %3, rax\n\t"
     
-        : "+D"(fd), "+S"(buf), "+d"(count), "=a"(sze) 
+        : "+r"(rdi), "+r"(rsi), "+r"(rdx), "=a"(sze) 
         :
         : "rcx", "r11", "memory"
     );
