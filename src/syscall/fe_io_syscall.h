@@ -7,22 +7,23 @@
 
 
 #pragma once
-#define size_t __SIZE_TYPE__
+#include <stddef.h>
 
 static inline int fewrite(int fd, const char buf[], size_t count);
 static inline int feread(int fd, char* buf, size_t count);
 
-
-static inline int fewrite(int fd, const char buf[], size_t count) {
+ 
+__attribute__((always_inline)) static inline 
+int fewrite(int fd, const char buf[], size_t count) {
 
 
     long int sze = 0;
 
-    register long rdi asm("rdi") = fd;
-    register long rsi asm("rsi") = (long)buf;
-    register long rdx asm("rdx") = count;
+    register long rdi __asm__("rdi") = fd;
+    register long rsi __asm__("rsi") = (long)buf;
+    register long rdx __asm__("rdx") = count;
 
-    asm volatile (
+    __asm__ __volatile__ (
         "mov rax, 1\n\t"
         "syscall\n\t"
 
@@ -37,15 +38,16 @@ static inline int fewrite(int fd, const char buf[], size_t count) {
 
 }
 
-static inline int feread(int fd, char* buf, size_t count) {
+__attribute__((always_inline)) static inline 
+int feread(int fd, char* buf, size_t count) {
 
     long int sze = 0;
 
-    register long rdi asm("rdi") = fd;
-    register long rsi asm("rsi") = (long)buf;
-    register long rdx asm("rdx") = count;
+    register long rdi __asm__("rdi") = fd;
+    register long rsi __asm__("rsi") = (long)buf;
+    register long rdx __asm__("rdx") = count;
 
-    asm volatile(
+    __asm__ __volatile__(
         "mov rax, 0\n\t"
         "syscall\n\t"
     

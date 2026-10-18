@@ -10,9 +10,9 @@
 
 void feexit(int status) {
 
-    register long edi asm("edi") = status;
+    register long edi __asm__("edi") = status;
 
-    asm volatile(
+    __asm__ __volatile__(
         "mov rax, 60\n\t"
         "syscall\n\t"
 
