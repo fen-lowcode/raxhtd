@@ -7,6 +7,6 @@
 
 
 #pragma once
-#define size_t __SIZE_TYPE__
+#include <stddef.h>
 
 size_t festrlen(char string[]);
