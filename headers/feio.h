@@ -6,8 +6,8 @@
  */
 
 
-#pragma once
-#define size_t __SIZE_TYPE__
+// #pragma once
+// #define size_t __SIZE_TYPE__
 
-int fewrite(int fd, const char buf[], size_t count);
-int feread(int fd, char* buf, size_t count);
+// int fewrite(int fd, const char buf[], size_t count);
+// int feread(int fd, char* buf, size_t count);

@@ -7,8 +7,11 @@
 
  
 #include "../headers/feexit.h"
-#include "../headers/feio.h"
+#include "./syscall/fe_io_syscall.h"
 #include "../headers/festr.h"
+
+
+
 
 void _start() {
 

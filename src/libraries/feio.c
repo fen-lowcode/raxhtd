@@ -9,7 +9,7 @@
 #include "../../headers/feio.h"
 #include "../../headers/festr.h"
 
-// refator this to follow write convetion  like feread()
+
 int fewrite(int fd, const char buf[], size_t count) {
 
 
@@ -33,8 +33,6 @@ int fewrite(int fd, const char buf[], size_t count) {
     return sze;
 
 }
-
-// Protoype!!
 
 int feread(int fd, char* buf, size_t count) {
 
