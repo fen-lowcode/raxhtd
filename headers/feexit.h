@@ -8,4 +8,4 @@
 
 #pragma once
 
-[[noreturn]] void feexit(int status);
+void feexit(int status);
