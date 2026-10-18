@@ -41,6 +41,31 @@ In a modern development landscape dominated by high-level abstractions, bloated 
 * Everything is from scratch excempt the gcc compiler 
 * No use of AI-generated code, it is entirely written by hand, purely for education.
 * Only allowed to write in C without standard glibc or third-party libraries and x64 Assembly
+* I'm only able to use freestanding C headers, which are headers only defines structures, data types and macros such as: 
+
+**Headers available as of C89**
+
+  * <float.h>
+  * <limits.h>
+  * <iso646.h>
+  * <stdarg.h>
+  * <stddef.h>
+
+**Headers available as of C99**
+
+  * <stdbool.h>
+  * <stdint.h>
+
+**Headers available as of C11**
+
+  * <stdalign.h>
+  * <stdnoreturn.h>
+
+**Headers available as of C23**
+
+  * <stdckdint.h>
+  * <stdbit.h>
+
 <!-- 
 
 ## Architecture <a name = "arch"></a>
