@@ -47,12 +47,30 @@ int fe_atoi(char number[]) {
     return buffer;
 }
 
-char itoa(int number) {
-    
-    
+
+// WIP!!!
+char fe_itoa(int number) {
+  
+    // by uisng modular operation by 10 i can get the most left number
+    // and then  by dividing by 10 i can remove the most left number
+
+    // by doing this in a loop while the whole input is greator than 10 then i can individually isolate each digits 
+    // to convert them to ascii by simply summing them to number 48 (48 represents 0 in asciiii!!! )
+
+    while(number > 10) {
+        int edge = number % 10;
+        int remain = number / 10;
+
+
+        number = remain;
+
+        printf("edge: %d\n", edge);
+        printf("remain: %d\n", remain);
+    }
 }
 
 
+// WIP!!
 
 void fe_printf(char string[], ...) {
     va_list ap;
@@ -106,17 +124,8 @@ int main() {
     // char buffer[20] = {'%', 'd'};
     // fe_printf("%d", 5);
 
-    char buf[10];
-
-    unsigned int x = 8 + 48;
-    unsigned int y = 9 + 48;
-    unsigned int z = 3 + 48;
-
-    buf[0] = x;
-    buf[1] = y;
-    buf[2] = z;
-    
-    printf("%s\n", &buf);
+  
+    fe_itoa(1231);
 
     return 0;
 }
