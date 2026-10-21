@@ -28,29 +28,29 @@ int add_all(int count, ...) {
 };
 
 
-// int atoi(char number[]) {
+int fe_atoi(char number[]) {
 
-//     const char base = '0';
-//     int buffer;
+    const char base = '0';
+    int buffer;
 
-//     for(int i = 0; i < strlen(number); i++) {
+    for(int i = 0; i < strlen(number); i++) {
 
-//         if (i == 0) {
-//             buffer = number[i] - base;
-//         } else {
-//             buffer = buffer * 10;
-//             int temp =  number[i] - base;
-//             buffer = buffer + temp;
-//         }
-//     }
+        if (i == 0) {
+            buffer = number[i] - base;
+        } else {
+            buffer = buffer * 10;
+            int temp =  number[i] - base;
+            buffer = buffer + temp;
+        }
+    }
 
-//     return buffer;
-// }
+    return buffer;
+}
 
-// char itoa(int number) {
+char itoa(int number) {
     
     
-// }
+}
 
 
 
@@ -73,8 +73,8 @@ void fe_printf(char string[], ...) {
 
             if (string[n] == 'd' ) {
                 int_i = va_arg(ap, int);
-                snprintf(buf, sizeof(buf), "%d", n);     /* the standard way */
-                string[n] = *buf;
+                // snprintf(buf, sizeof(buf), "%d", n);     /* the standard way */
+                printf("%d", int_i);
             }
 
             if(string[n] == 'f') {
@@ -100,9 +100,23 @@ void fe_printf(char string[], ...) {
 
 int main() {
 
-    int val = add_all(5, 1, 2, 3, 4, 5);
-    printf("Value: %d\n", val);
+    // int val = add_all(5, 1, 2, 3, 4, 5);
+    // printf("Value: %d\n", val); 
 
-    fe_printf("%d", 1);
+    // char buffer[20] = {'%', 'd'};
+    // fe_printf("%d", 5);
+
+    char buf[10];
+
+    unsigned int x = 8 + 48;
+    unsigned int y = 9 + 48;
+    unsigned int z = 3 + 48;
+
+    buf[0] = x;
+    buf[1] = y;
+    buf[2] = z;
+    
+    printf("%s\n", &buf);
+
     return 0;
 }
