@@ -49,6 +49,8 @@ int fe_atoi(char number[]) {
 
 
 // WIP!!!
+
+__attribute__((warning("fe_itoa is only intended to work with pre-compiled values, not with unknown values during runtime")))
 char fe_itoa(int number) {
   
     // by uisng modular operation by 10 i can get the most left number
