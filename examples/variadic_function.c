@@ -71,6 +71,7 @@ char fe_itoa(long long int number, char ln[] ,size_t lenght) {
 
     // char ln[lenght];
 
+    // reverse the order of the number before converting into char
     while (number > 0) {
         edge = number % 10;
         remain = number / 10;
@@ -91,6 +92,8 @@ char fe_itoa(long long int number, char ln[] ,size_t lenght) {
         }
     }
 
+
+    // convert the reversed number into char
     int i = 0;
     for(; rvrs > 0; i++) {
         edge = rvrs % 10;
