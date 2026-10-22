@@ -50,8 +50,8 @@ int fe_atoi(char number[]) {
 
 // WIP!!!
 
-__attribute__((warning("fe_itoa is only intended to work with pre-compiled values, not with unknown values during runtime")))
-char fe_itoa(int number) {
+// __attribute__((warning("fe_itoa is only intended to work with pre-compiled values, not with unknown values during runtime")))
+char fe_itoa(long long int number, char ln[] ,size_t lenght) {
   
     // by uisng modular operation by 10 i can get the most left number
     // and then  by dividing by 10 i can remove the most left number
@@ -59,17 +59,74 @@ char fe_itoa(int number) {
     // by doing this in a loop while the whole input is greator than 10 then i can individually isolate each digits 
     // to convert them to ascii by simply summing them to number 48 (48 represents 0 in asciiii!!! )
 
-    while(number > 10) {
-        int edge = number % 10;
-        int remain = number / 10;
+    // but the order will be reversed if if i store each digits right away after conversing them to ascii so i have
+    // to reverse the strings again
 
+    #define NOT_SET 0
 
+    char ctoa;
+    int rvrs = NOT_SET;
+    int edge;
+    int remain;
+
+    // char ln[lenght];
+
+    while (number > 0) {
+        edge = number % 10;
+        remain = number / 10;
         number = remain;
+    
+        if(number >= 10 && rvrs == NOT_SET) {
+            rvrs = edge;
+        } 
+        
+        else if (number >= 10 && rvrs != NOT_SET ) {
+            rvrs = rvrs * 10;
+            rvrs = rvrs + edge;
+        }
 
-        printf("edge: %d\n", edge);
-        printf("remain: %d\n", remain);
+        else if (number < 10) {
+            rvrs = rvrs * 10;
+            rvrs = rvrs + edge;
+        }
     }
+
+    int i = 0;
+    for(; rvrs > 0; i++) {
+        edge = rvrs % 10;
+        remain = rvrs / 10;
+        rvrs = remain;
+         
+        ctoa = edge + 48;
+        ln[i] = ctoa;
+    }
+    
+    // ln[i] = remain + 48;
+    ln[++i] = '\0';
+    // printf("Output: %s\n", ln);
+    // printf("size: %d\n", lenght);
 }
+
+
+
+int main() {
+
+    // int val = add_all(5, 1, 2, 3, 4, 5);
+    // printf("Value: %d\n", val); 
+
+    // char buffer[20] = {'%', 'd'};
+    // fe_printf("%d", 5);
+  
+    long long int x = 457012139;
+    char ln[10];
+
+    printf("Integer: %d\n", x);
+    fe_itoa(x, ln , 10);
+    printf("Converted by fe_itoa: %s\n", ln);
+    return 0;
+}
+
+
 
 
 // WIP!!
@@ -114,20 +171,4 @@ void fe_printf(char string[], ...) {
             return;
         }
     }
-}
-
-
-
-int main() {
-
-    // int val = add_all(5, 1, 2, 3, 4, 5);
-    // printf("Value: %d\n", val); 
-
-    // char buffer[20] = {'%', 'd'};
-    // fe_printf("%d", 5);
-
-  
-    fe_itoa(1231);
-
-    return 0;
 }
