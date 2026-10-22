@@ -51,7 +51,7 @@ int fe_atoi(char number[]) {
 // WIP!!!
 
 // __attribute__((warning("fe_itoa is only intended to work with pre-compiled values, not with unknown values during runtime")))
-char fe_itoa(long long int number, char ln[] ,size_t lenght) {
+void fe_itoa(long long int number, char ln[] ,size_t lenght) {
   
     // by uisng modular operation by 10 i can get the most left number
     // and then  by dividing by 10 i can remove the most left number
@@ -62,44 +62,52 @@ char fe_itoa(long long int number, char ln[] ,size_t lenght) {
     // but the order will be reversed if if i store each digits right away after conversing them to ascii so i have
     // to reverse the strings again
 
-    #define NOT_SET 0
+    #define NOT_SET -1
 
     char ctoa;
     int rvrs = NOT_SET;
     int edge;
     int remain;
 
-    // char ln[lenght];
+    int count_digit = 0;
 
-    // reverse the order of the number before converting into char
-    while (number > 0) {
+    // // char ln[lenght];
+
+    // // reverse the order of the number before converting into char
+    // while (number > 0) {            // Keyproblem
+    //     edge = number % 10;
+    //     remain = number / 10;
+    //     number = remain;
+    
+    //     if(number >= 10 && rvrs == NOT_SET) {
+    //         rvrs = edge;
+
+    //         printf("1st\n");
+    //     } 
+        
+    //     else if (number >= 10 && rvrs != NOT_SET ) {
+    //         rvrs = rvrs * 10;
+    //         rvrs = rvrs + edge;
+    //         printf("2nd\n");
+    //     }
+
+    //     else if (number < 10) {
+    //         rvrs = rvrs * 10;
+    //         rvrs = rvrs + edge;
+    //         printf("3rd\n");
+    //     }
+
+    //     count_digit++;
+
+    // }
+
+
+    int i = 0;
+    for(; number > 0; i++) {
         edge = number % 10;
         remain = number / 10;
         number = remain;
-    
-        if(number >= 10 && rvrs == NOT_SET) {
-            rvrs = edge;
-        } 
-        
-        else if (number >= 10 && rvrs != NOT_SET ) {
-            rvrs = rvrs * 10;
-            rvrs = rvrs + edge;
-        }
 
-        else if (number < 10) {
-            rvrs = rvrs * 10;
-            rvrs = rvrs + edge;
-        }
-    }
-
-
-    // convert the reversed number into char
-    int i = 0;
-    for(; rvrs > 0; i++) {
-        edge = rvrs % 10;
-        remain = rvrs / 10;
-        rvrs = remain;
-         
         ctoa = edge + 48;
         ln[i] = ctoa;
     }
@@ -111,21 +119,24 @@ char fe_itoa(long long int number, char ln[] ,size_t lenght) {
 }
 
 
+void fn(char buf[], int size){
+    printf("OUT: %c\n", buf[size]);
+}
+
+
 
 int main() {
 
-    // int val = add_all(5, 1, 2, 3, 4, 5);
-    // printf("Value: %d\n", val); 
-
-    // char buffer[20] = {'%', 'd'};
-    // fe_printf("%d", 5);
-  
-    long long int x = 457012139;
+    long long int x = 5050;
     char ln[10];
-
     printf("Integer: %d\n", x);
     fe_itoa(x, ln , 10);
     printf("Converted by fe_itoa: %s\n", ln);
+
+    char buf[] = "abc";
+
+    fn(buf, 1);
+
     return 0;
 }
 
