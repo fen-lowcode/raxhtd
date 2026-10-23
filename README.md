@@ -7,6 +7,8 @@
 <p align = "center">made entirely from scratch</p>
 
 
+![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+
 ## Table of Contents
 
 - [ What is RAXHTD ](#what)
