@@ -109,7 +109,8 @@ void fe_itoa(long long int number, char ln[] ,size_t lenght) {
         number = remain;
 
         ctoa = edge + 48;
-        ln[i] = ctoa;
+        ln[lenght] = ctoa;
+        lenght = lenght - 1;
     }
     
     // ln[i] = remain + 48;
@@ -130,12 +131,12 @@ int main() {
     long long int x = 5050;
     char ln[10];
     printf("Integer: %d\n", x);
-    fe_itoa(x, ln , 10);
+    fe_itoa(x, ln , 3);
     printf("Converted by fe_itoa: %s\n", ln);
 
     char buf[] = "abc";
 
-    fn(buf, 1);
+    fn(buf, 0);
 
     return 0;
 }
