@@ -62,44 +62,10 @@ void fe_itoa(long long int number, char ln[] ,size_t lenght) {
     // but the order will be reversed if if i store each digits right away after conversing them to ascii so i have
     // to reverse the strings again
 
-    #define NOT_SET -1
 
     char ctoa;
-    int rvrs = NOT_SET;
     int edge;
     int remain;
-
-    int count_digit = 0;
-
-    // // char ln[lenght];
-
-    // // reverse the order of the number before converting into char
-    // while (number > 0) {            // Keyproblem
-    //     edge = number % 10;
-    //     remain = number / 10;
-    //     number = remain;
-    
-    //     if(number >= 10 && rvrs == NOT_SET) {
-    //         rvrs = edge;
-
-    //         printf("1st\n");
-    //     } 
-        
-    //     else if (number >= 10 && rvrs != NOT_SET ) {
-    //         rvrs = rvrs * 10;
-    //         rvrs = rvrs + edge;
-    //         printf("2nd\n");
-    //     }
-
-    //     else if (number < 10) {
-    //         rvrs = rvrs * 10;
-    //         rvrs = rvrs + edge;
-    //         printf("3rd\n");
-    //     }
-
-    //     count_digit++;
-
-    // }
 
 
     int i = 0;
@@ -128,7 +94,7 @@ void fn(char buf[], int size){
 
 int main() {
 
-    long long int x = 5050;
+    long long int x = 3001;
     char ln[10];
     printf("Integer: %d\n", x);
     fe_itoa(x, ln , 3);
