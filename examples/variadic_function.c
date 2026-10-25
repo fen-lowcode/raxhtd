@@ -66,6 +66,7 @@ void fe_itoa(long long int number, char ln[] ,size_t lenght) {
     char ctoa;
     int edge;
     int remain;
+    lenght--;
 
 
     int i = 0;
@@ -90,19 +91,34 @@ void fn(char buf[], int size){
     printf("OUT: %c\n", buf[size]);
 }
 
+void fe_strcpy(char destination[], char target[], size_t sze) {
+
+    for(int i = 0; i < sze; i++) {
+        char c = destination[i];
+        if(c != '\0') {
+            target[i] = c;
+        }
+    }
+}
 
 
 int main() {
 
-    long long int x = 3001;
+    // fe_itoa prototyope
+    long long int x = 30011;
     char ln[10];
     printf("Integer: %d\n", x);
-    fe_itoa(x, ln , 3);
+    fe_itoa(x, ln , 5);
     printf("Converted by fe_itoa: %s\n", ln);
 
-    char buf[] = "abc";
+    
+    char org[] = "Hello World";
+    char cpy[20];
 
-    fn(buf, 0);
+    fe_strcpy(org, cpy, strlen(org));
+
+    printf("output: %s\n", cpy);
+   
 
     return 0;
 }
@@ -113,6 +129,9 @@ int main() {
 // WIP!!
 
 void fe_printf(char string[], ...) {
+
+    // char string_tmp[] = string;
+
     va_list ap;
     va_start(ap, string);
 
