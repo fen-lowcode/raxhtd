@@ -6,25 +6,20 @@
  */
 
  
-#include "../headers/feexit.h"
+#include "../headers/fe_exit.h"
 #include "./syscall/fe_io_syscall.h"
-#include "../headers/festr.h"
+#include "../headers/fe_string.h"
 
 
 
 
 void _start() {
 
-    char buffer[100];
+    char buffer[] = "Hello World";
+    char cpy[100];
 
-    char * inp_msg = "Type any message: ";
-    fewrite(0, inp_msg, festrlen(inp_msg));
-
-    [[maybe_unused]]int x = feread(1, buffer, 100);
-
-    char * out_msg = "Raxhtd prints back: ";
-    fewrite(0, out_msg, festrlen(out_msg));
-
-    fewrite(0, buffer, festrlen(buffer));
+    fe_strcpy(buffer, cpy, festrlen(buffer));
+    fewrite(1, cpy, 11);
+    
     feexit(0);
 }
