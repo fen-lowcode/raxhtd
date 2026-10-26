@@ -10,3 +10,4 @@
 #include <stddef.h>
 
 size_t festrlen(char string[]);
+void fe_strcpy(char destination[], char target[], size_t sze);

@@ -27,3 +27,14 @@ size_t festrlen(char string[]) {
     return sze;
 }
 
+
+
+void fe_strcpy(char destination[], char target[], size_t sze) {
+
+    for(int i = 0; i < sze; i++) {
+        char c = destination[i];
+        if(c != '\0') {
+            target[i] = c;
+        }
+    }
+}
