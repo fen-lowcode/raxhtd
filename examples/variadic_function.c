@@ -91,6 +91,7 @@ void fn(char buf[], int size){
     printf("OUT: %c\n", buf[size]);
 }
 
+
 void fe_strcpy(char destination[], char target[], size_t sze) {
 
     for(int i = 0; i < sze; i++) {
@@ -102,41 +103,17 @@ void fe_strcpy(char destination[], char target[], size_t sze) {
 }
 
 
-int main() {
-
-    // fe_itoa prototyope
-    long long int x = 30011;
-    char ln[10];
-    printf("Integer: %d\n", x);
-    fe_itoa(x, ln , 5);
-    printf("Converted by fe_itoa: %s\n", ln);
-
-    
-    char org[] = "Hello World";
-    char cpy[20];
-
-    fe_strcpy(org, cpy, strlen(org));
-
-    printf("output: %s\n", cpy);
-   
-
-    return 0;
-}
-
-
-
 
 // WIP!!
 
-void fe_printf(char string[], ...) {
+void fe_print_1byte(char string[], ...) {
 
-    // char string_tmp[] = string;
+    char string_tmp[1024 * 1024];
+    fe_strcpy(string, string_tmp, strlen(string_tmp));
 
     va_list ap;
     va_start(ap, string);
 
-
-    char buf[1];
     int int_i;
     char char_i;
     float float_i;
@@ -150,8 +127,6 @@ void fe_printf(char string[], ...) {
 
             if (string[n] == 'd' ) {
                 int_i = va_arg(ap, int);
-                // snprintf(buf, sizeof(buf), "%d", n);     /* the standard way */
-                printf("%d", int_i);
             }
 
             if(string[n] == 'f') {
@@ -171,4 +146,35 @@ void fe_printf(char string[], ...) {
             return;
         }
     }
+}
+
+#include "fe_io_syscall.h"
+void DisplayConsoleStr(char string[]) {
+    fewrite(1, string, strlen(string));
+}
+
+
+
+int main() {
+
+    // fe_itoa prototyope
+    long long int x = 30011;
+    char ln[10];
+    printf("Integer: %d\n", x);
+    fe_itoa(x, ln , 5);
+    printf("Converted by fe_itoa: %s\n", ln);
+
+   
+    char cpy[5];
+    char org[] = "Hello mmmmmmmmmmmmmmmmmmmmmmT";
+   
+
+    fe_strcpy(org, cpy, strlen(org));
+
+    printf("output: %s\n", cpy);
+
+    fe_print("HELLOOOOO WORLDDDDDDDDDDDDDDDDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!UUUUUUUUUUUQWQ\n");
+   
+
+    return 0;
 }
