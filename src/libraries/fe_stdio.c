@@ -11,15 +11,11 @@
 
 
 #include "../../headers/fe_stdio.h"
-#include <stdarg.h>
+#include "../../headers/fe_string.h"
+#include "../syscall/fe_io_syscall.h"
 
-void fe_printf(const char string[], ...) {
-    va_list ap;
-    va_start(ap, string);
+// #include <stdarg.h>
 
-    for(char* i; i != '\0'; i++) {
-        if (string[i] == 'a') {
-            
-        }
-    }
+void DisplayConsoleStr(char string[]) {
+    fewrite(1, string, fe_strlen(string));
 }

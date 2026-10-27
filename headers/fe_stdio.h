@@ -11,4 +11,4 @@
 
 #include <stdarg.h>
 
-void fe_printf(const char* string, ...);
+void DisplayConsoleStr(char string[]);
