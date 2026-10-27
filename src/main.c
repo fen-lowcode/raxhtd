@@ -9,17 +9,20 @@
 #include "../headers/fe_exit.h"
 #include "./syscall/fe_io_syscall.h"
 #include "../headers/fe_string.h"
+#include "../headers/fe_stdio.h"
 
 
 
 
 void _start() {
 
-    char buffer[] = "Hello World";
-    char cpy[100];
+    char cpy[1024];
+    char buffer[] = "Hello Worlddd\n";
 
-    fe_strcpy(buffer, cpy, festrlen(buffer));
-    fewrite(1, cpy, 11);
+    fe_strcpy(buffer, cpy, fe_strlen(buffer));
+
+    // fewrite(1, cpy, fe_strlen(cpy));
+    DisplayConsoleStr(cpy);
     
     feexit(0);
 }
