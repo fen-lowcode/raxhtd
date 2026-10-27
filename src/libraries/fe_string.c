@@ -29,12 +29,13 @@ size_t fe_strlen(char string[]) {
 
 void fe_strcpy(char destination[], char target[], size_t sze) {
 
-    int i = 0;
-    for(; i < sze; i++) {
+    for(int i = 0; i < sze; i++) {
         char c = destination[i];
         if(c != '\0') {
             target[i] = c;
+        } else {
+            target[i] = '0';
+            return;
         }
     }
-    destination[i++] = '\0';
 }
