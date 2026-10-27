@@ -6,7 +6,7 @@
  */
 
 
-#include "../../headers/feexit.h"
+#include "../../headers/fe_exit.h"
 
 void feexit(int status) {
 
