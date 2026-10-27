@@ -9,5 +9,5 @@
 #pragma once
 #include <stddef.h>
 
-size_t festrlen(char string[]);
+size_t fe_strlen(char string[]);
 void fe_strcpy(char destination[], char target[], size_t sze);
