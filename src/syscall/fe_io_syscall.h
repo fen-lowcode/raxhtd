@@ -13,6 +13,8 @@ static inline int fewrite(int fd, const char buf[], size_t count);
 static inline int feread(int fd, char* buf, size_t count);
 
  
+
+// My own System call wrapper for write
 __attribute__((always_inline)) static inline 
 int fewrite(int fd, const char buf[], size_t count) {
 
@@ -38,6 +40,7 @@ int fewrite(int fd, const char buf[], size_t count) {
 
 }
 
+// My own System call wrapper for read
 __attribute__((always_inline)) static inline 
 int feread(int fd, char* buf, size_t count) {
 
