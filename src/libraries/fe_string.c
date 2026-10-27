@@ -8,10 +8,10 @@
 
 #include <stddef.h>
 
-size_t festrlen(char string[]) {
+
+size_t fe_strlen(char string[]) {
 
     size_t sze = 0;
-
     int i = 0;
     while(1) {
         if (string[i] != '\0') {
@@ -19,11 +19,9 @@ size_t festrlen(char string[]) {
             i++;
 
         } else {
-
             break;
         }
     }
-    
     return sze;
 }
 
@@ -31,10 +29,12 @@ size_t festrlen(char string[]) {
 
 void fe_strcpy(char destination[], char target[], size_t sze) {
 
-    for(int i = 0; i < sze; i++) {
+    int i = 0;
+    for(; i < sze; i++) {
         char c = destination[i];
         if(c != '\0') {
             target[i] = c;
         }
     }
+    destination[i++] = '\0';
 }
