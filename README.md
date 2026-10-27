@@ -30,7 +30,9 @@
 
 **RAXHTD** (RAX HyperText Daemon) is an ultra-low-latency HTTP server written entirely from scratch in glibc-free C and x86_64 Assembly. Bypassing the standard C library entirely, RAXHTD eliminates the overhead of functions like printf() and malloc(). Instead, it interacts directly with the Linux kernel via raw system calls and relies on custom engineered, bare metal memory and string manipulation functions for maximum performance and a near-zero binary footprint.
 
-<img src="./assets/raxhtd_cli.png" alt="raxhtd"></a>
+<p align="center">
+ <img src="./assets/raxhtd_cli.png" alt="raxhtd"></a>
+</p>
 
 ## The Purpose of RAXHTD <a name = "purpose"></a>
 
