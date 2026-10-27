@@ -10,19 +10,20 @@
 #include "./syscall/fe_io_syscall.h"
 #include "../headers/fe_string.h"
 #include "../headers/fe_stdio.h"
+#include "banner.h"
 
 
 
 
 void _start() {
 
-    char cpy[1024];
-    char buffer[] = "Hello Worlddd\n";
+    // char cpy[1024];
+    // char buffer[] = "Hello Worlddd\n";
 
-    fe_strcpy(buffer, cpy, fe_strlen(buffer));
+    // fe_strcpy(buffer, cpy, fe_strlen(buffer));
+    // DisplayConsoleStr(cpy);
 
-    // fewrite(1, cpy, fe_strlen(cpy));
-    DisplayConsoleStr(cpy);
+    DisplayConsoleStr(banner);
     
     feexit(0);
 }
