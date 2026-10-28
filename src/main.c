@@ -23,7 +23,11 @@ void _start() {
     // fe_strcpy(buffer, cpy, fe_strlen(buffer));
     // DisplayConsoleStr(cpy);
 
+    char *cmd;
+
     DisplayConsoleStr(banner);
+    DisplayConsoleStr(":> ");
+    feread(0, cmd, 1);
     
     feexit(0);
 }
