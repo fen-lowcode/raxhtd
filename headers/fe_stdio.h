@@ -10,5 +10,7 @@
 // #define size_t __SIZE_TYPE__
 
 #include <stdarg.h>
+#include <stddef.h>
 
 void DisplayConsoleStr(char string[]);
+void ReadConsoleStr(char string[], size_t size);

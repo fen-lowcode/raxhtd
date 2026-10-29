@@ -19,3 +19,7 @@
 void DisplayConsoleStr(char string[]) {
     fewrite(1, string, fe_strlen(string));
 }
+
+void ReadConsoleStr(char string[], size_t size) {
+    feread(0, string, size);
+}
