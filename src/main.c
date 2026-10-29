@@ -14,7 +14,6 @@
 
 
 
-
 void _start() {
 
     // char cpy[1024];
@@ -23,11 +22,16 @@ void _start() {
     // fe_strcpy(buffer, cpy, fe_strlen(buffer));
     // DisplayConsoleStr(cpy);
 
-    char *cmd;
+    char cmd[255];
+
 
     DisplayConsoleStr(banner);
-    DisplayConsoleStr(":> ");
-    feread(0, cmd, 1);
-    
+    DisplayConsoleStr("Type /h to list commands\n\n");
+
+    while(1) {
+        DisplayConsoleStr("~ ● -- ❯❯❯ ");
+        ReadConsoleStr(cmd, sizeof(cmd));
+    }   
+ 
     feexit(0);
 }
