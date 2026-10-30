@@ -17,9 +17,9 @@ hero:
       text: Join My Journey
       link: /guide/introduction
 
-    - theme: alt
-      text: markdown
-      link: /markdown-examples
+    # - theme: alt
+    #   text: markdown
+    #   link: /markdown-examples
 
 
 features:
