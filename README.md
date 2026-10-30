@@ -30,15 +30,18 @@
 **RAXHTD** (RAX HyperText Daemon) is an ultra-low-latency HTTP server written entirely from scratch in glibc-free C and x86_64 Assembly. Bypassing the standard C library entirely, RAXHTD eliminates the overhead of functions like printf() and malloc(). Instead, it interacts directly with the Linux kernel via raw system calls and relies on custom engineered, bare metal memory and string manipulation functions for maximum performance and a near-zero binary footprint.
 
 
-## The Purpose of RAXHTD <a name = "purpose"></a>
+## The Purpose <a name = "purpose"></a>
 
-In a modern development landscape dominated by high-level abstractions, bloated libraries, and "black box" APIs 
-that blurs the mechanics behind the scenes, building software from the ground up has become a lost art form. 
+Writing a server in this way serves as an excercise for me to get used in writing in 
+C in an enviroment where there is no operating system to catch mistakes, which such is called **freestanding C**.
 
-So indulging myself into a deeper understanding of how computer memory and networking works under the hood as close as possible without any abstraction on my way... is a CHALLENGE i seek.
+In this way i can advance my skills beyond normal software development and go beyond in the world of bare-metal IoT and Operating System development.
 
-**RAXHTD** is not designed to replace production-grade enterprise servers like Apache or Nginx. Instead, it stands as a pure, educational pursuit a challenge to reclaim mastery over the machine, stripping away the magic boxes to appreciate the raw engineering of the technology behind the web.
+And indulging in a deeper understanding of how computer memory and networking works, how each layers of the linux operating system work together under the hood as close as possible to the linux kernel by building an HTTP web server without any abstraction on the way, is one of the best piece of art.
 
+
+## To be clear
+**RAXHTD** is not designed to replace production-grade enterprise servers like Apache or Nginx. Instead, it stands as a pure, educational pursuit a challenge to reclaim the mastery over the machine, stripping away the magic boxes to appreciate the raw engineering of the technology behind modern abstractions.
 
 ## Full Documentation <a name = "mention"></a>
 
