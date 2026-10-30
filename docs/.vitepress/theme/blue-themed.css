@@ -1,0 +1,376 @@
+/* ==========================================================================
+   Raxhtd Server docs theme: "blueprint slab"
+   Cool pale-blue backgrounds, deep slate text, one cobalt accent.
+   Zilla Slab for prose and headings, IBM Plex Mono for code.
+   Loaded from .vitepress/theme/index.js, which also imports the fonts.
+   ========================================================================== */
+
+:root {
+  /* ---------- Fonts ---------- */
+  --vp-font-family-base: "Zilla Slab", ui-serif, Georgia, serif;
+  --vp-font-family-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --slab-font: "Zilla Slab", ui-serif, Georgia, serif;
+
+  /* ---------- Backgrounds: cool pale blue-gray ---------- */
+  --vp-c-bg: #f1f5fa;
+  --vp-c-bg-alt: #e8eef6;
+  --vp-c-bg-soft: #e2eaf4;
+  --vp-c-bg-elv: #f1f5fa;
+  --vp-c-divider: #cdd8e6;
+  --vp-c-gutter: #dde6f1;
+
+  /* ---------- Text: deep slate ---------- */
+  --vp-c-text-1: #14202e;
+  --vp-c-text-2: #44546a;
+  --vp-c-text-3: #78879b;
+
+  /* ---------- Accent: cobalt ---------- */
+  --vp-c-brand-1: #1f4fd8;
+  --vp-c-brand-2: #3a66e6;
+  --vp-c-brand-3: #173ca8;
+  --vp-c-brand-soft: rgba(31, 79, 216, 0.1);
+
+  /* ---------- Hero: solid color, no gradient ---------- */
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+
+  /* ---------- Buttons ---------- */
+  --vp-button-brand-bg: #1f4fd8;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-bg: #3a66e6;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-bg: #173ca8;
+  --vp-button-alt-bg: transparent;
+  --vp-button-alt-text: #14202e;
+  --vp-button-alt-border: #b5c4d8;
+  --vp-button-alt-hover-bg: #e2eaf4;
+  --vp-button-alt-hover-border: #8fa3bf;
+
+  /* ---------- Code ---------- */
+  --vp-code-block-bg: #e6edf6;
+  --vp-code-line-highlight-color: rgba(31, 79, 216, 0.08);
+  --vp-code-color: #173ca8;
+  --vp-code-bg: rgba(20, 32, 46, 0.06);
+
+  /* ---------- Containers ---------- */
+  --vp-custom-block-tip-bg: rgba(31, 79, 216, 0.06);
+  --vp-custom-block-warning-bg: rgba(200, 130, 10, 0.1);
+  --vp-custom-block-warning-border: rgba(200, 130, 10, 0.4);
+  --vp-custom-block-warning-text: #8a5a00;
+  --vp-custom-block-danger-bg: rgba(200, 40, 40, 0.08);
+  --vp-custom-block-danger-border: rgba(200, 40, 40, 0.4);
+  --vp-custom-block-danger-text: #a82020;
+}
+
+/* --------------------------------------------------------------------------
+   BODY TEXT
+   -------------------------------------------------------------------------- */
+
+.vp-doc p,
+.vp-doc li,
+.vp-doc td {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.vp-doc strong {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   HEADINGS
+   -------------------------------------------------------------------------- */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc h1 { font-size: 2.6rem; }
+
+.vp-doc h2 {
+  font-size: 2rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 { font-size: 1.55rem; font-weight: 600; }
+
+.vp-doc h4 { font-size: 1.3rem; font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   LINKS
+   -------------------------------------------------------------------------- */
+
+.vp-doc a {
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 79, 216, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s;
+}
+
+.vp-doc a:hover {
+  text-decoration-color: var(--vp-c-brand-1);
+}
+
+/* --------------------------------------------------------------------------
+   NAVIGATION
+   -------------------------------------------------------------------------- */
+
+.VPNavBarTitle .title {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.VPSidebarItem .text,
+.VPNavBarMenuLink {
+  font-size: 1.1rem;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.VPDocAsideOutline .outline-title,
+.VPDocAsideOutline .outline-link {
+  font-family: var(--slab-font);
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   CODE (stays monospace)
+   -------------------------------------------------------------------------- */
+
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+}
+
+.vp-doc div[class*="language-"] pre,
+.vp-doc div[class*="language-"] code {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.vp-doc [class*="language-"] > span.lang {
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
+.vp-doc :not(pre) > code {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.9rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 3px;
+}
+
+.vp-code-group .tabs {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* --------------------------------------------------------------------------
+   TABLES
+   -------------------------------------------------------------------------- */
+
+.vp-doc th {
+  font-family: var(--slab-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-alt);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: var(--vp-c-bg-soft);
+}
+
+/* --------------------------------------------------------------------------
+   HOME PAGE: HERO
+   -------------------------------------------------------------------------- */
+
+.VPHero .name,
+.VPHero .text {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.VPHero .tagline {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+/* Desktop: put the text block and the logo on the same vertical center. */
+@media (min-width: 960px) {
+  .VPHero.has-image .container {
+    align-items: center;
+  }
+
+  .VPHero .main {
+    justify-content: center;
+  }
+
+  .VPHero .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .VPHero .image-container {
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+  }
+}
+
+/* Logo sits above the backdrop layers. */
+.VPHero .image-src {
+  z-index: 2;
+  max-width: 240px;
+  max-height: 240px;
+}
+
+@media (min-width: 960px) {
+  .VPHero .image-src {
+    max-width: 260px;
+    max-height: 260px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HERO LOGO BACKDROP
+   ::before = soft gradient rounded shape
+   ::after  = blurred cobalt glow behind it
+   -------------------------------------------------------------------------- */
+
+.VPHero .image-container {
+  position: relative;
+  isolation: isolate; /* keeps the glow layer inside the container */
+}
+
+.VPHero .image-container::before,
+.VPHero .image-container::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+/* The shape: rounded squircle with a light-to-cobalt gradient. */
+.VPHero .image-container::before {
+  inset: 6%;
+  border-radius: 34%;
+  background: linear-gradient(145deg, #eef3ff 0%, #b4c9ff 50%, #7a9bf7 100%);
+  box-shadow:
+    0 30px 60px -20px rgba(31, 79, 216, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  z-index: 0;
+}
+
+/* The glow: blurred color bleeding out from behind the shape. */
+.VPHero .image-container::after {
+  inset: -4%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 25%, rgba(58, 102, 230, 0.45), transparent 65%);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+/* --------------------------------------------------------------------------
+   HERO BUTTONS
+   -------------------------------------------------------------------------- */
+
+.VPButton {
+  font-family: var(--slab-font);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.VPButton.medium {
+  height: 52px;
+  line-height: 50px;
+  padding: 0 32px;
+  font-size: 1.25rem;
+  border-radius: 4px;
+}
+
+.VPHero .actions {
+  gap: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   FEATURE CARDS
+   !important beats VitePress's more specific default styles.
+   -------------------------------------------------------------------------- */
+
+.VPFeature {
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 4px !important;
+  background: #f9fbfe !important;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  background: #ffffff !important;
+}
+
+.VPFeature .title {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.VPFeature .details {
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   CUSTOM CONTAINERS
+   -------------------------------------------------------------------------- */
+
+.vp-doc .custom-block {
+  border-radius: 4px;
+}
+
+.vp-doc .custom-block p {
+  font-size: 1.1rem;
+}
+
+.vp-doc .custom-block-title {
+  font-family: var(--slab-font);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   SCROLLBARS
+   -------------------------------------------------------------------------- */
+
+.VPSidebar,
+.vp-doc div[class*="language-"] pre {
+  scrollbar-width: thin;
+  scrollbar-color: #b5c4d8 transparent;
+}
+
+
+body {
+  background-image:
+    linear-gradient(rgba(208, 221, 255, 0.582) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(209, 220, 252, 0.582) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
