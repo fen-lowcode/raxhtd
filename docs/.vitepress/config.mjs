@@ -38,7 +38,7 @@ export default defineConfig({
     search: { provider: 'local' },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fen-lowcode' }
+      { icon: 'github', link: 'https://github.com/fen-lowcode/raxhtd' }
     ]
   },
 
