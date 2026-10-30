@@ -9,7 +9,7 @@ hero:
   tagline: "- fen-lowcode -"
 
   image: 
-    src: ./assets/raxhtd.png
+    src: ./assets/raxhtd_2.png
 
   actions:
     
