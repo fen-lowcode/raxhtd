@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/raxhtd/',
   title: 'Raxhtd Server',
   description: 'A glibc-free HTTP server in C',
   appearance: false,
