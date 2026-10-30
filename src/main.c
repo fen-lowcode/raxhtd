@@ -13,25 +13,32 @@
 #include "banner.h"
 
 
-
-void _start() {
-
-    // char cpy[1024];
-    // char buffer[] = "Hello Worlddd\n";
-
-    // fe_strcpy(buffer, cpy, fe_strlen(buffer));
-    // DisplayConsoleStr(cpy);
-
-    char cmd[255];
-
-
-    DisplayConsoleStr(banner);
+__attribute__((always_inline))
+inline void showHelper() {
     DisplayConsoleStr("Type /h to list commands\n\n");
+}
 
+__attribute__((always_inline))
+inline void inputListener() {
+    char cmd[100];
     while(1) {
         DisplayConsoleStr("~ ● -- ❯❯❯ ");
         ReadConsoleStr(cmd, sizeof(cmd));
     }   
- 
+}
+
+__attribute__((always_inline))
+inline void cliLoop() {
+
+    DisplayConsoleStr(banner);
+    showHelper();
+    inputListener();
+
+}
+
+
+void _start() {
+
+    cliLoop();
     feexit(0);
 }
