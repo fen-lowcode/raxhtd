@@ -268,7 +268,7 @@
 /* Quote line (moved here so the avatar can use .main::before).
    Change the text in `content` to edit it. */
 .VPHero .heading::before {
-  content: "“A proud showcase of my project”";
+  content: "“A journey in freestanding C”";
   display: block;
   width: fit-content;
   margin: 0 auto 20px;

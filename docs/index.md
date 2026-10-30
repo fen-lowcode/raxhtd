@@ -14,7 +14,7 @@ hero:
   actions:
     
     - theme: brand
-      text: Read more
+      text: Join My Journey
       link: /guide/introduction
 
     - theme: alt
@@ -23,27 +23,27 @@ hero:
 
 
 features:
-  - title: No glibc
-    details: Built with -nostdlib and -ffreestanding, with its own _start entry point.
-    link: /internals/no-libc
+  - title: What is glibc?
+    details: understanding what it means to be a C standard library 
+    link: /guide/how-raxhtd-is-built
 
-  - title: Raw syscalls
-    details: socket, bind, accept, read and write go straight to the kernel.
-    link: /internals/syscalls
+  # - title: Raw syscalls
+  #   details: socket, bind, accept, read and write go straight to the kernel.
+  #   link: /internals/syscalls
 
-  - title: Event loop
-    details: How connections are accepted and served.
-    link: /internals/sockets
+  # - title: Event loop
+  #   details: How connections are accepted and served.
+  #   link: /internals/sockets
 
-  - title: HTTP parser
-    details: A hand-written request parser, explained line by line.
-    link: /internals/http-parser
+  # - title: HTTP parser
+  #   details: A hand-written request parser, explained line by line.
+  #   link: /internals/http-parser
 
-  - title: Memory
-    details: Buffers and allocation without malloc.
-    link: /internals/memory
+  # - title: Memory
+  #   details: Buffers and allocation without malloc.
+  #   link: /internals/memory
 
-  - title: Build and run
-    details: Compile flags, running the server, and testing it with curl.
-    link: /guide/building
+  # - title: Build and run
+  #   details: Compile flags, running the server, and testing it with curl.
+  #   link: /guide/building
 ---

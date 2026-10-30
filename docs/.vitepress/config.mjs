@@ -18,20 +18,20 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/guide/introduction' },
           // { text: 'Getting started', link: '/guide/getting-started' },
-          { text: 'Building', link: '/guide/building' },
-          { text: 'Using the server', link: '/guide/usage' },
+          { text: 'How raxhtd is built', link: '/guide/how-raxhtd-is-built' },
+          // { text: 'Using the server', link: '/guide/usage' },
         ],
       },
-      {
-        text: 'How it works',
-        items: [
-          { text: 'Going without glibc', link: '/internals/no-libc' },
-          { text: 'Entry point and syscalls', link: '/internals/syscalls' },
-          { text: 'Sockets and the event loop', link: '/internals/sockets' },
-          { text: 'Parsing HTTP', link: '/internals/http-parser' },
-          { text: 'Memory and buffers', link: '/internals/memory' },
-        ],
-      },
+      // {
+      //   text: 'How it works',
+      //   items: [
+      //     { text: 'Going without glibc', link: '/internals/no-libc' },
+      //     { text: 'Entry point and syscalls', link: '/internals/syscalls' },
+      //     { text: 'Sockets and the event loop', link: '/internals/sockets' },
+      //     { text: 'Parsing HTTP', link: '/internals/http-parser' },
+      //     { text: 'Memory and buffers', link: '/internals/memory' },
+      //   ],
+      // },
     ],
 
     outline: { level: [2, 3] },
