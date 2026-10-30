@@ -6,7 +6,7 @@ hero:
 
   name: "RAXHTD"
   text: "zero to server"
-  tagline: "- by fen-lowcode"
+  tagline: "- fen-lowcode -"
 
   image: 
     src: ./assets/raxhtd.png

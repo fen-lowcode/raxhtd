@@ -1,1 +1,2 @@
-./docs/.vitepress/cache/deps
+docs/.vitepress/cache/deps
+docs/node_modules
