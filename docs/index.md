@@ -25,7 +25,7 @@ hero:
 features:
   - title: What is glibc?
     details: understanding what it means to be a C standard library 
-    link: /guide/how-raxhtd-is-built
+    link: /guide/how-raxhtd-is-built#What-is-glibc
 
   # - title: Raw syscalls
   #   details: socket, bind, accept, read and write go straight to the kernel.

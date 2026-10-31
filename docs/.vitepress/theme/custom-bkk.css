@@ -1,34 +1,45 @@
 /* ==========================================================================
-   Raxhtd Server docs theme: "blueprint slab"
-   Cool pale-blue backgrounds, deep slate text, one cobalt accent.
-   Zilla Slab for prose and headings, IBM Plex Mono for code.
-   Loaded from .vitepress/theme/index.js, which also imports the fonts.
+   Raxhtd Server docs theme: "red grid terminal", memory dump colors
+   Oxblood-black backgrounds, warm bone text, one red accent,
+   amber for addresses and markers, red graph-paper grid behind everything.
+   Zilla Slab for prose, IBM Plex Mono for headings, nav and code.
+   Both fonts were already imported by .vitepress/theme/index.js.
+   Tip: set `appearance: 'force-dark'` in .vitepress/config to hide the
+   light/dark toggle, since this theme is dark only.
    ========================================================================== */
 
-:root {
+:root,
+.dark {
+  color-scheme: dark;
+
   /* ---------- Fonts ---------- */
   --vp-font-family-base: "Zilla Slab", ui-serif, Georgia, serif;
   --vp-font-family-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --slab-font: "Zilla Slab", ui-serif, Georgia, serif;
+  --head-font: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  /* ---------- Backgrounds: cool pale blue-gray ---------- */
-  --vp-c-bg: #f1f5fa;
-  --vp-c-bg-alt: #e8eef6;
-  --vp-c-bg-soft: #e2eaf4;
-  --vp-c-bg-elv: #f1f5fa;
-  --vp-c-divider: #cdd8e6;
-  --vp-c-gutter: #dde6f1;
+  /* ---------- Extra accent colors ---------- */
+  --mem-amber: #ffb454;
+  --mem-rose: #ff8fa3;
 
-  /* ---------- Text: deep slate ---------- */
-  --vp-c-text-1: #14202e;
-  --vp-c-text-2: #44546a;
-  --vp-c-text-3: #78879b;
+  /* ---------- Backgrounds: oxblood black ---------- */
+  --vp-c-bg: #0f0709;
+  --vp-c-bg-alt: #150a0d;
+  --vp-c-bg-soft: #1c0e12;
+  --vp-c-bg-elv: #1c0e12;
+  --vp-c-divider: #3a1a20;
+  --vp-c-gutter: #1a0c10;
 
-  /* ---------- Accent: cobalt ---------- */
-  --vp-c-brand-1: #1f4fd8;
-  --vp-c-brand-2: #3a66e6;
-  --vp-c-brand-3: #173ca8;
-  --vp-c-brand-soft: rgba(31, 79, 216, 0.1);
+  /* ---------- Text: warm bone ---------- */
+  --vp-c-text-1: #f4e3df;
+  --vp-c-text-2: #c9a9a6;
+  --vp-c-text-3: #8f6e6e;
+
+  /* ---------- Accent: red ---------- */
+  --vp-c-brand-1: #ff4d4d;
+  --vp-c-brand-2: #ff6b6b;
+  --vp-c-brand-3: #d91f26;
+  --vp-c-brand-soft: rgba(255, 77, 77, 0.14);
 
   /* ---------- Hero: solid color, no gradient ---------- */
   --vp-home-hero-name-color: var(--vp-c-brand-1);
@@ -37,32 +48,39 @@
   --vp-home-hero-image-filter: none;
 
   /* ---------- Buttons ---------- */
-  --vp-button-brand-bg: #1f4fd8;
+  --vp-button-brand-bg: #d91f26;
   --vp-button-brand-text: #ffffff;
   --vp-button-brand-border: transparent;
-  --vp-button-brand-hover-bg: #3a66e6;
+  --vp-button-brand-hover-bg: #f03a3f;
   --vp-button-brand-hover-text: #ffffff;
-  --vp-button-brand-active-bg: #173ca8;
+  --vp-button-brand-active-bg: #b3151b;
   --vp-button-alt-bg: transparent;
-  --vp-button-alt-text: #14202e;
-  --vp-button-alt-border: #b5c4d8;
-  --vp-button-alt-hover-bg: #e2eaf4;
-  --vp-button-alt-hover-border: #8fa3bf;
+  --vp-button-alt-text: #f4e3df;
+  --vp-button-alt-border: #5a2a31;
+  --vp-button-alt-hover-bg: #26121a;
+  --vp-button-alt-hover-border: #ff4d4d;
+  --vp-button-alt-hover-text: #ffffff;
 
   /* ---------- Code ---------- */
-  --vp-code-block-bg: #e6edf6;
-  --vp-code-line-highlight-color: rgba(31, 79, 216, 0.08);
-  --vp-code-color: #173ca8;
-  --vp-code-bg: rgba(20, 32, 46, 0.06);
+  --vp-code-block-bg: #0a0507;
+  --vp-code-line-highlight-color: rgba(255, 77, 77, 0.12);
+  --vp-code-color: #ffb454;
+  --vp-code-bg: rgba(255, 180, 84, 0.1);
 
   /* ---------- Containers ---------- */
-  --vp-custom-block-tip-bg: rgba(31, 79, 216, 0.06);
-  --vp-custom-block-warning-bg: rgba(200, 130, 10, 0.1);
-  --vp-custom-block-warning-border: rgba(200, 130, 10, 0.4);
-  --vp-custom-block-warning-text: #8a5a00;
-  --vp-custom-block-danger-bg: rgba(200, 40, 40, 0.08);
-  --vp-custom-block-danger-border: rgba(200, 40, 40, 0.4);
-  --vp-custom-block-danger-text: #a82020;
+  --vp-custom-block-tip-bg: rgba(79, 209, 197, 0.07);
+  --vp-custom-block-tip-border: rgba(79, 209, 197, 0.4);
+  --vp-custom-block-tip-text: #7fe3d9;
+  --vp-custom-block-warning-bg: rgba(255, 180, 84, 0.1);
+  --vp-custom-block-warning-border: rgba(255, 180, 84, 0.45);
+  --vp-custom-block-warning-text: #ffc880;
+  --vp-custom-block-danger-bg: rgba(255, 77, 77, 0.14);
+  --vp-custom-block-danger-border: rgba(255, 77, 77, 0.6);
+  --vp-custom-block-danger-text: #ff8080;
+}
+
+::selection {
+  background: rgba(255, 77, 77, 0.4);
 }
 
 /* --------------------------------------------------------------------------
@@ -78,31 +96,42 @@
 
 .vp-doc strong {
   font-weight: 700;
+  color: var(--mem-rose);
 }
 
 /* --------------------------------------------------------------------------
-   HEADINGS
+   HEADINGS (monospace, with markdown-style markers on h2 and h3)
    -------------------------------------------------------------------------- */
 
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4 {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
-.vp-doc h1 { font-size: 2.6rem; }
+.vp-doc h1 { font-size: 2.3rem; }
 
 .vp-doc h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.vp-doc h3 { font-size: 1.55rem; font-weight: 600; }
+.vp-doc h3 { font-size: 1.3rem; font-weight: 600; }
 
-.vp-doc h4 { font-size: 1.3rem; font-weight: 600; }
+.vp-doc h4 { font-size: 1.1rem; font-weight: 600; }
+
+.vp-doc h2::before,
+.vp-doc h3::before {
+  color: var(--mem-amber);
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.vp-doc h2::before { content: "## "; }
+.vp-doc h3::before { content: "### "; }
 
 /* --------------------------------------------------------------------------
    LINKS
@@ -110,7 +139,7 @@
 
 .vp-doc a {
   text-decoration: underline;
-  text-decoration-color: rgba(31, 79, 216, 0.35);
+  text-decoration-color: rgba(255, 77, 77, 0.5);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s;
 }
@@ -119,14 +148,19 @@
   text-decoration-color: var(--vp-c-brand-1);
 }
 
+:focus-visible {
+  outline: 2px solid var(--mem-amber);
+  outline-offset: 2px;
+}
+
 /* --------------------------------------------------------------------------
    NAVIGATION
    -------------------------------------------------------------------------- */
 
 .VPNavBarTitle .title {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
 }
 
 .VPSidebarItem .text,
@@ -135,15 +169,20 @@
 }
 
 .VPSidebarItem.level-0 > .item .text {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+  color: var(--mem-amber);
+}
+
+.VPSidebarItem.is-active > .item .text {
+  color: var(--vp-c-brand-1);
 }
 
 .VPDocAsideOutline .outline-title,
 .VPDocAsideOutline .outline-link {
-  font-family: var(--slab-font);
-  font-size: 1rem;
+  font-family: var(--head-font);
+  font-size: 0.9rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -161,6 +200,13 @@
   line-height: 1.7;
 }
 
+/* Always use the dark syntax colors, even if the dark class is missing. */
+.vp-doc .shiki,
+.vp-doc .shiki span {
+  color: var(--shiki-dark, inherit) !important;
+  background-color: transparent !important;
+}
+
 .vp-doc [class*="language-"] > span.lang {
   font-family: var(--vp-font-family-mono);
   font-size: 12px;
@@ -172,7 +218,7 @@
 .vp-doc :not(pre) > code {
   font-family: var(--vp-font-family-mono);
   font-size: 0.9rem;
-  border: 1px solid var(--vp-c-divider);
+  border: 1px solid rgba(255, 180, 84, 0.25);
   border-radius: 3px;
 }
 
@@ -185,10 +231,10 @@
    -------------------------------------------------------------------------- */
 
 .vp-doc th {
-  font-family: var(--slab-font);
-  font-size: 1.1rem;
+  font-family: var(--head-font);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--vp-c-text-1);
+  color: var(--mem-amber);
   background: var(--vp-c-bg-alt);
 }
 
@@ -202,9 +248,9 @@
 
 .VPHero .name,
 .VPHero .text {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
@@ -212,6 +258,45 @@
   max-width: 600px;
   line-height: 1.6;
   font-size: 1.4rem;
+}
+
+/* Profile picture circle above the quote.
+   Put your image at docs/public/pfp.png (or change the url below). */
+.VPHero .main::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  border: 2px solid none;
+  box-shadow: 0 6px 16px -6px rgba(255, 77, 77, 0.5);
+  /* image on top, red placeholder underneath if the image is missing */
+  background:
+    url("../../public/assets/fen.jpeg") center / cover no-repeat,
+    linear-gradient(145deg, #3a0d12 0%, #d91f26 100%);
+}
+
+/* Quote line (moved here so the avatar can use .main::before).
+   Change the text in `content` to edit it. */
+.VPHero .heading::before {
+  content: "“A journey in freestanding C”";
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  font-family: var(--head-font);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--mem-amber);
+}
+
+@media (min-width: 960px) {
+  .VPHero .main::before,
+  .VPHero .heading::before {
+    margin-left: 0;
+  }
 }
 
 /* Desktop: put the text block and the logo on the same vertical center. */
@@ -254,7 +339,7 @@
 /* --------------------------------------------------------------------------
    HERO LOGO BACKDROP
    ::before = soft gradient rounded shape
-   ::after  = blurred cobalt glow behind it
+   ::after  = blurred red glow behind it
    -------------------------------------------------------------------------- */
 
 .VPHero .image-container {
@@ -268,23 +353,21 @@
   position: absolute;
   pointer-events: none;
 }
-
-/* The shape: rounded squircle with a light-to-cobalt gradient. */
+/* 
 .VPHero .image-container::before {
   inset: 6%;
   border-radius: 34%;
-  background: linear-gradient(145deg, #eef3ff 0%, #b4c9ff 50%, #7a9bf7 100%);
+  background: linear-gradient(145deg, #3a0d12 0%, #7d1a22 50%, #d91f26 100%);
   box-shadow:
-    0 30px 60px -20px rgba(31, 79, 216, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 30px 60px -20px rgba(255, 77, 77, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   z-index: 0;
-}
+} */
 
-/* The glow: blurred color bleeding out from behind the shape. */
 .VPHero .image-container::after {
   inset: -4%;
   border-radius: 50%;
-  background: radial-gradient(circle at 70% 25%, rgba(58, 102, 230, 0.45), transparent 65%);
+  background: radial-gradient(circle at 70% 25%, rgba(255, 60, 60, 0.45), transparent 150%);
   filter: blur(40px);
   z-index: -1;
 }
@@ -294,7 +377,7 @@
    -------------------------------------------------------------------------- */
 
 .VPButton {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -303,7 +386,7 @@
   height: 52px;
   line-height: 50px;
   padding: 0 32px;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   border-radius: 4px;
 }
 
@@ -319,19 +402,19 @@
 .VPFeature {
   border: 1px solid var(--vp-c-divider) !important;
   border-radius: 4px !important;
-  background: #f9fbfe !important;
+  background: #170b0f !important;
   transition: border-color 0.15s, background 0.15s;
 }
 
 .VPFeature:hover {
   border-color: var(--vp-c-brand-1) !important;
-  background: #ffffff !important;
+  background: #200f14 !important;
 }
 
 .VPFeature .title {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .VPFeature .details {
@@ -352,9 +435,9 @@
 }
 
 .vp-doc .custom-block-title {
-  font-family: var(--slab-font);
+  font-family: var(--head-font);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -364,13 +447,16 @@
 .VPSidebar,
 .vp-doc div[class*="language-"] pre {
   scrollbar-width: thin;
-  scrollbar-color: #b5c4d8 transparent;
+  scrollbar-color: #5a2a31 transparent;
 }
 
+/* --------------------------------------------------------------------------
+   BACKGROUND: red grid tiles
+   -------------------------------------------------------------------------- */
 
 body {
   background-image:
-    linear-gradient(rgba(208, 221, 255, 0.582) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(209, 220, 252, 0.582) 1px, transparent 1px);
+    linear-gradient(rgba(255, 77, 77, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 77, 77, 0.1) 1px, transparent 1px);
   background-size: 24px 24px;
 }
