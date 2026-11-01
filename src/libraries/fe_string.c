@@ -35,3 +35,20 @@ void fe_strcpy(char destination[], char target[], size_t sze) {
     }
     target[i++] = '\0';
 }
+
+int compareStr(char string_1[], char string_2[]) {
+
+    if(fe_strlen(string_1) != fe_strlen(string_2)){
+        return 0;
+    }
+
+    for (int i = 0; i <= fe_strlen(string_1); i++){
+        if(string_1[1] == string_2[i]) {
+            continue;
+        } else {
+            return 0;
+        }
+    }
+
+    return 1;
+}

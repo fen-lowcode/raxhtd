@@ -11,3 +11,4 @@
 
 size_t fe_strlen(char string[]);
 void fe_strcpy(char destination[], char target[], size_t sze);
+int compareStr(char strin_1[], char string_2[]);
