@@ -9,4 +9,7 @@
 // #pragma once
 // #define size_t __SIZE_TYPE__
 
+#include <stddef.h>
+
 int atoi(char number[]);
+void fe_itoa(long long int number, char ln[] ,size_t lenght);
