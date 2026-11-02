@@ -30,3 +30,36 @@ int atoi(char number[]) {
 
     return buffer;
 }
+
+
+// __attribute__((warning("fe_itoa is only intended to work with compile-time values, nand not for runtime value")))
+void fe_itoa(long long int number, char ln[] ,size_t lenght) {
+  
+    // by uisng modular operation by 10 i can get the most left number
+    // and then  by dividing by 10 i can remove the most left number
+
+    // by doing this in a loop while the whole input is greator than 10 then i can individually isolate each digits 
+    // to convert them to ascii by simply summing them to number 48 (48 represents 0 in asciiii!!! )
+
+    // but the order will be reversed if if i store each digits right away after conversing them to ascii so i have
+    // to reverse the strings again
+    char ctoa;
+    int edge;
+    int remain;
+    lenght--;
+
+    int i = 0;
+    for(; number > 0; i++) {
+        edge = number % 10;
+        remain = number / 10;
+        number = remain;
+
+        ctoa = edge + 48;
+        ln[lenght] = ctoa;
+        lenght = lenght - 1;
+    }
+    
+   
+    ln[++i] = '\0';
+}
+
