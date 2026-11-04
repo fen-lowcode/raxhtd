@@ -42,11 +42,17 @@ void _start() {
     char str1[] = "hello";
     char str2[] = "hello";
 
-    if(compareStr(str1, str2) == 1) {
-        DisplayConsoleStr("True\n");
-    } else {
-        DisplayConsoleStr("False\n");
-    }
+    
+
+    int res = compareStr(str1, str2);
+
+    if(res == 0) {
+        DisplayConsoleStr("not matching\n");
+    } 
+    
+    // else {
+    //     DisplayConsoleStr("False\n");
+    // }
 
     // cliLoop();
     feexit(0);
